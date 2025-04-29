@@ -8,10 +8,10 @@
 .dimension-display {
 	font-size: 2.5rem;
 	font-weight: bold;
-	background: linear-gradient(135deg, #3b82f6, #6366f1);
+	/* background: linear-gradient(135deg, #3b82f6, #6366f1); */
 	-webkit-background-clip: text;
 	background-clip: text;
-	color: transparent;
+	color: #3b82f6;
 }
 .responsive-icon {
 	animation: pulse 2s infinite;
