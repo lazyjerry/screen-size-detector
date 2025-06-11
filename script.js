@@ -52,6 +52,11 @@ function getBrowserInfo() {
   // 更新時間
   document.getElementById("update-time").textContent = new Date().toLocaleString();
 
+  // 添加 document.getElementById("update-time") 連結，點擊後開啟當前網頁
+  document.getElementById("update-time").addEventListener("click", function () {
+    window.open(location.href, "_blank");
+  });
+
   // 更新框架對應的class
   updateFrameworkClasses(width);
 }

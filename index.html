@@ -2,16 +2,31 @@
 <html lang="zh-TW">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
 		<title>瀏覽器資訊檢測</title>
 		<!-- <script src="https://cdn.tailwindcss.com"></script> -->
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-		<link rel="stylesheet" href="/style.css" />
-		<link rel="stylesheet" href="/tailwindcss.css" />
+		<link
+			rel="stylesheet"
+			href="/style.css?v=2025-06-11"
+		/>
+		<link
+			rel="stylesheet"
+			href="/tailwindcss.css?v=2025-06-11"
+		/>
 	</head>
 	<body class="bg-gray-50 min-h-screen">
-		<div class="container mx-auto px-4 py-8 max-w-4xl" id="content-to-export">
+		<div
+			class="container mx-auto px-4 py-8 max-w-4xl"
+			id="content-to-export"
+		>
 			<div class="text-center mb-8">
 				<h1 class="text-3xl font-bold text-blue-600 mb-2">
 					<i class="fas fa-info-circle mr-2"></i>
@@ -33,15 +48,30 @@
 					<div class="space-y-4">
 						<div class="flex justify-between items-center">
 							<span class="text-gray-600">寬度 (px):</span>
-							<span id="window-width" class="dimension-display">--</span>
+							<span
+								id="window-width"
+								class="dimension-display"
+							>
+								--
+							</span>
 						</div>
 						<div class="flex justify-between items-center">
 							<span class="text-gray-600">高度 (px):</span>
-							<span id="window-height" class="dimension-display">--</span>
+							<span
+								id="window-height"
+								class="dimension-display"
+							>
+								--
+							</span>
 						</div>
 						<div class="mt-4 p-3 bg-gray-100 rounded-lg">
 							<div class="text-sm text-gray-600 mb-1">視窗比例 (寬:高):</div>
-							<div id="window-ratio" class="font-medium text-gray-800">--</div>
+							<div
+								id="window-ratio"
+								class="font-medium text-gray-800"
+							>
+								--
+							</div>
 						</div>
 					</div>
 				</div>
@@ -57,19 +87,39 @@
 					<div class="space-y-4">
 						<div class="flex justify-between items-center">
 							<span class="text-gray-600">螢幕寬度 (px):</span>
-							<span id="screen-width" class="font-bold text-green-600 text-2xl">--</span>
+							<span
+								id="screen-width"
+								class="font-bold text-green-600 text-2xl"
+							>
+								--
+							</span>
 						</div>
 						<div class="flex justify-between items-center">
 							<span class="text-gray-600">螢幕高度 (px):</span>
-							<span id="screen-height" class="font-bold text-green-600 text-2xl">--</span>
+							<span
+								id="screen-height"
+								class="font-bold text-green-600 text-2xl"
+							>
+								--
+							</span>
 						</div>
 						<div class="flex justify-between items-center">
 							<span class="text-gray-600">色彩深度:</span>
-							<span id="color-depth" class="font-bold text-gray-800">--</span>
+							<span
+								id="color-depth"
+								class="font-bold text-gray-800"
+							>
+								--
+							</span>
 						</div>
 						<div class="flex justify-between items-center">
 							<span class="text-gray-600">像素比例:</span>
-							<span id="pixel-ratio" class="font-bold text-gray-800">--</span>
+							<span
+								id="pixel-ratio"
+								class="font-bold text-gray-800"
+							>
+								--
+							</span>
 						</div>
 					</div>
 				</div>
@@ -88,15 +138,30 @@
 						<div class="space-y-2">
 							<div class="flex justify-between">
 								<span class="text-gray-600">瀏覽器名稱:</span>
-								<span id="browser-name" class="font-medium">--</span>
+								<span
+									id="browser-name"
+									class="font-medium"
+								>
+									--
+								</span>
 							</div>
 							<div class="flex justify-between">
 								<span class="text-gray-600">瀏覽器版本:</span>
-								<span id="browser-version" class="font-medium">--</span>
+								<span
+									id="browser-version"
+									class="font-medium"
+								>
+									--
+								</span>
 							</div>
 							<div class="flex flex-col">
 								<span class="text-gray-600">使用者代理:</span>
-								<div id="user-agent" class="user-agent-full">--</div>
+								<div
+									id="user-agent"
+									class="user-agent-full"
+								>
+									--
+								</div>
 							</div>
 						</div>
 					</div>
@@ -106,15 +171,30 @@
 						<div class="space-y-2">
 							<div class="flex justify-between">
 								<span class="text-gray-600">作業系統:</span>
-								<span id="os" class="font-medium">--</span>
+								<span
+									id="os"
+									class="font-medium"
+								>
+									--
+								</span>
 							</div>
 							<div class="flex justify-between">
 								<span class="text-gray-600">CPU核心數:</span>
-								<span id="cpu-cores" class="font-medium">--</span>
+								<span
+									id="cpu-cores"
+									class="font-medium"
+								>
+									--
+								</span>
 							</div>
 							<div class="flex justify-between">
 								<span class="text-gray-600">裝置類型:</span>
-								<span id="device-type" class="font-medium">--</span>
+								<span
+									id="device-type"
+									class="font-medium"
+								>
+									--
+								</span>
 							</div>
 						</div>
 					</div>
@@ -131,7 +211,12 @@
 				<div class="mb-4">
 					<div class="flex justify-between mb-1">
 						<span class="text-sm text-gray-600">當前視窗寬度</span>
-						<span id="responsive-width" class="text-sm font-medium">-- px</span>
+						<span
+							id="responsive-width"
+							class="text-sm font-medium"
+						>
+							-- px
+						</span>
 					</div>
 					<div class="w-full bg-gray-200 rounded-full h-4">
 						<div
@@ -174,11 +259,19 @@
 					<h3 class="font-medium text-gray-700 mb-2">主流前端框架對應系統</h3>
 					<p class="text-sm text-gray-600 mb-3">
 						當前視窗寬度
-						<span id="current-width-display" class="font-medium text-blue-600">-- px</span>
+						<span
+							id="current-width-display"
+							class="font-medium text-blue-600"
+						>
+							-- px
+						</span>
 						應對應以下格線系統中的 class
 					</p>
 
-					<div class="framework-grid" id="framework-grid">
+					<div
+						class="framework-grid"
+						id="framework-grid"
+					>
 						<div class="framework-item">
 							<div class="framework-name">Bootstrap</div>
 							<div class="framework-system">Grid</div>
@@ -281,7 +374,12 @@
 				<div class="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-100">
 					<div class="flex items-center">
 						<i class="fas fa-lightbulb text-yellow-500 mr-2"></i>
-						<p id="responsive-tip" class="text-sm text-blue-800">調整視窗大小以查看響應式變化</p>
+						<p
+							id="responsive-tip"
+							class="text-sm text-blue-800"
+						>
+							調整視窗大小以查看響應式變化
+						</p>
 					</div>
 				</div>
 			</div>
@@ -290,16 +388,26 @@
 			<div class="text-center mt-8 text-sm text-gray-500">
 				<p>
 					© 2025 Jerry Lin. (https://github.com/lazyjerry） | 畫面時間:
-					<span id="update-time"></span>
+					<span
+						id="update-time"
+						class="update-time"
+					></span>
 				</p>
 			</div>
 		</div>
 
 		<!-- 浮動按鈕 -->
-		<div class="float-btn" title="匯出JPG" onclick="exportToJPG()">
+		<div
+			class="float-btn"
+			title="匯出JPG"
+			onclick="exportToJPG()"
+		>
 			<i class="fas fa-camera text-2xl"></i>
 		</div>
 
-		<script src="/script.js" defer></script>
+		<script
+			src="/script.js?v=2025-06-11"
+			defer
+		></script>
 	</body>
 </html>
